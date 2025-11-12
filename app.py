@@ -17,16 +17,16 @@ app = Flask(__name__)
 
 # Configuration
 class Config:
-    IDRAC_URL = "https://10.129.16.81"
-    IDRAC_USERNAME = "root"
-    IDRAC_PASSWORD = "P@ssw0rd3128!"
+    IDRAC_URL = ""
+    IDRAC_USERNAME = ""
+    IDRAC_PASSWORD = ""
     
     # SMTP Configuration
     SMTP_SERVER = "smtp.gmail.com"
     SMTP_PORT = 587
-    SENDER_EMAIL = "nxpisian@gmail.com"
-    SENDER_PASSWORD = "aqkz uykr cmfu oqbm"
-    RECEIVER_EMAIL = "supercompnxp@gmail.com"
+    SENDER_EMAIL = "sender@gmail.com"
+    SENDER_PASSWORD = ""app password from gmail"
+    RECEIVER_EMAIL = ""
     
     # Monitoring Configuration
     CHECK_INTERVAL_MINUTES = 60
@@ -730,4 +730,5 @@ if __name__ == '__main__':
     logging.info(f"Scheduler started - checking every {Config.CHECK_INTERVAL_MINUTES} minutes")
     
     # Start Flask app
+
     app.run(host='0.0.0.0', port=5000, debug=False, use_reloader=False)
